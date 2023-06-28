@@ -1,6 +1,6 @@
-const { parentPort, workerData } = require('worker_threads');
+import { parentPort, workerData } from 'worker_threads';
 
-const isPrime = (num: number) => {
+const isPrime = (num: number):boolean => {
   if (num <= 1) {
     return false;
   }
@@ -23,4 +23,4 @@ for (let i = start; i <= end; i++) {
   }
 }
 
-parentPort.postMessage(results);
+parentPort?.postMessage(results);

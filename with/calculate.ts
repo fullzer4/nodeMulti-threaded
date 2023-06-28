@@ -2,7 +2,7 @@ import { Worker } from 'worker_threads';
 
 export const calculate = (start: number, end: number): Promise<number[]> => {
   return new Promise((resolve, reject) => {
-    const workerCount = 4; 
+    const workerCount = 8; 
     const results:  Array<number[]> = [];
 
     const range = Math.ceil((end - start + 1) / workerCount);

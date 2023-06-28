@@ -1,9 +1,9 @@
 import fs from 'fs';
 import axios from 'axios';
 
-const numTests = 100;
+const numTests = 20;
 const multiThreadServerURL = 'http://localhost:8080/calculate';
-const singleThreadServerURL = 'http://localhost:8000/calculate';
+const singleThreadServerURL = 'http://localhost:8081/calculate';
 
 const makeRequest = async (url: string): Promise<number> => {
     const start = process.hrtime();

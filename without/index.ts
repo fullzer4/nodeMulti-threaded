@@ -6,7 +6,7 @@ const server = fastify()
 server.get('/calculate', async (request, reply) => {
 
     const start = 1;
-    const end = 100_000_000;
+    const end = 10_000_000;
 
     const result: Array<number> = calculate(start, end)
     return `${result}`
